@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import logging
 import os
 
@@ -36,7 +37,7 @@ def main():
         )
 
         client.admin.command("ping")
-
+        logging.info("Connected to MongoDB Atlas successfully.")
         database = client["bookstore"]
         authors = database["authors"]
         books = database["books"]
